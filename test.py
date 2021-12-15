@@ -95,5 +95,6 @@ class Test(TestCase):
     def test_4(self, return_value):
         values=schl.get_scheduled_workers()
         self.assertEqual(next(values),'RENE-ASTRID: 3')
+        self.assertEqual(next(values),'ASTRID-MARCI: 1')
 
 unittest.main()

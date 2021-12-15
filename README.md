@@ -18,4 +18,4 @@ The full program was constructed using oriented programming objects, furthermore
 
 #### Considerations: 
 The program only match exact schedule for employees, it ignores or raise error if a string do not follow the correct format. It depends of the console parameter in the main.py file. If a employee has the same name that other employee, the first user will be replace for the last one in the file.
-We assume that the time for employee is not less than a day, an employee does not have more than schedule per day.
+We assume that the schedule time per employee in day occurs once.
