@@ -45,8 +45,9 @@ class Test(TestCase):
         self.assertEqual(next(values), "RENE-ANDRES: 2")
         self.assertEqual(next(values), "ASTRID-ANDRES: 3")
     
+   
     @patch('builtins.input', return_value= "tests/test_2.txt")
-    def test_1(self, return_value):
+    def test_2(self, return_value):
         values=schl.get_scheduled_workers()
         self.assertEqual(next(values),'RENE-ASTRID: 2')
         self.assertEqual(next(values),'RENE-ANDRES: 2')
@@ -84,5 +85,15 @@ class Test(TestCase):
         self.assertEqual(next(values),'ASTRIX-PABLO: 2')
         self.assertEqual(next(values),'ASTRIX-KIM: 2')
         self.assertEqual(next(values),'PABLO-KIM: 1')
+    
+    @patch('builtins.input', return_value= "tests/test_3.txt")
+    def test_3(self, return_value):
+        values=schl.get_scheduled_workers()
+        self.assertEqual(next(values),'RENE-ASTRID: 3')
+    
+    @patch('builtins.input', return_value= "tests/test_4.txt")
+    def test_4(self, return_value):
+        values=schl.get_scheduled_workers()
+        self.assertEqual(next(values),'RENE-ASTRID: 3')
 
 unittest.main()
