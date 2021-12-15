@@ -14,38 +14,38 @@ class Test(TestCase):
             next(schl.get_scheduled_workers())
         self.assertEqual(str(context.exception), cte.ERROR_FILE)
     
-    @patch('builtins.input', return_value= "test_bad_format_1.txt")
+    @patch('builtins.input', return_value= "tests/test_bad_format_1.txt")
     def test_bad_format_1(self, return_value):
         with self.assertRaises(ValueError) as context:
             next(schl.get_scheduled_workers())
         self.assertEqual(str(context.exception), cte.ERROR_FORMAT)
     
-    @patch('builtins.input', return_value= "test_bad_format_2.txt")
+    @patch('builtins.input', return_value= "tests/test_bad_format_2.txt")
     def test_bad_format_2(self, return_value):
         with self.assertRaises(ValueError) as context:
             next(schl.get_scheduled_workers())
         self.assertEqual(str(context.exception), cte.ERROR_FORMAT)
     
-    @patch('builtins.input', return_value= "test_bad_format_3.txt")
+    @patch('builtins.input', return_value= "tests/test_bad_format_3.txt")
     def test_bad_format_3(self, return_value):
         with self.assertRaises(ValueError) as context:
             next(schl.get_scheduled_workers())
         self.assertEqual(str(context.exception), cte.ERROR_FORMAT)
     
-    @patch('builtins.input', return_value= "test_bad_format_3.txt")
+    @patch('builtins.input', return_value= "tests/test_bad_format_3.txt")
     def test_bad_format_4(self, return_value):
         with self.assertRaises(ValueError) as context:
             next(schl.get_scheduled_workers())
         self.assertEqual(str(context.exception), cte.ERROR_FORMAT)
 
-    @patch('builtins.input', return_value= "test_1.txt")
+    @patch('builtins.input', return_value= "tests/test_1.txt")
     def test_1(self, return_value):
         values=schl.get_scheduled_workers()
         self.assertEqual(next(values), "RENE-ASTRID: 2")
         self.assertEqual(next(values), "RENE-ANDRES: 2")
         self.assertEqual(next(values), "ASTRID-ANDRES: 3")
     
-    @patch('builtins.input', return_value= "test_2.txt")
+    @patch('builtins.input', return_value= "tests/test_2.txt")
     def test_1(self, return_value):
         values=schl.get_scheduled_workers()
         self.assertEqual(next(values),'RENE-ASTRID: 2')
